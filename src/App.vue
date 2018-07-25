@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <mt-header fixed title="上海前端黑马21期"></mt-header>
-    <router-view/>
-    <nav class="mui-bar mui-bar-tab">
+	<div id="app">
+		<mt-header fixed title="上海前端黑马21期"></mt-header>
+		<router-view/>
+		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item mui-active" to="/">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
@@ -12,7 +12,9 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/cart">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+					<span class="mui-badge">9</span>
+				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item" to="/search">
@@ -20,15 +22,16 @@
 				<span class="mui-tab-label">搜索</span>
 			</router-link>
 		</nav>
-  </div>
+	</div>
 </template>
 
 <style lang="less">
-	.page{
-		margin-top: 40px;
-	}
+.page {
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
 
-	body{
-		background-color: #fff !important;
-	}
+body {
+  background-color: #fff !important;
+}
 </style>
