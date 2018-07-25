@@ -11,10 +11,17 @@
             </div>
             <div class="newscontent" v-html="newsInfo.content"></div>
         </div>
+        <div class="comment">
+            <Comment :artid="$route.query.id"></Comment>
+        </div>
     </div>
 </template>
 <script>
 import axios from "axios";
+
+// 引入评论组件
+import Comment from "@/components/Comment.vue"
+
 export default {
   data() {
     return {
@@ -31,6 +38,9 @@ export default {
       // console.log(res.data.message);
       this.newsInfo = res.data.message[0];
     });
+  },
+  components: {
+      Comment
   }
 };
 </script>
