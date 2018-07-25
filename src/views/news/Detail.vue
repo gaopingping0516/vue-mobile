@@ -4,7 +4,7 @@
             <div class="newstitle">
                 <h4>{{newsInfo.title}}</h4>
                 <p class="news-info">
-                    <span>发表时间: {{newsInfo.add_time}}</span>
+                    <span>发表时间: {{newsInfo.add_time | dateformat('YYYY-MM-DD HH:mm:ss')}}</span>
                     <span class="mui-pull-right">点击： {{newsInfo.click}}次</span>
                 </p>
                 <hr>
@@ -20,9 +20,14 @@
 import axios from "axios";
 
 // 引入评论组件
-import Comment from "@/components/Comment.vue"
+import Comment from "@/components/Comment.vue";
+
+import dateformat from "@/filters/dateformat.js";
 
 export default {
+  filters: {
+    dateformat
+  },
   data() {
     return {
       newsInfo: {}
@@ -40,17 +45,17 @@ export default {
     });
   },
   components: {
-      Comment
+    Comment
   }
 };
 </script>
 
 <style>
-.news{
-    padding: 5px;
+.news {
+  padding: 5px;
 }
 
-.newscontent img{
-    width: 100%;
+.newscontent img {
+  width: 100%;
 }
 </style>
