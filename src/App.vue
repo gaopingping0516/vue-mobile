@@ -27,4 +27,8 @@
 	.page{
 		margin-top: 40px;
 	}
+
+	body{
+		background-color: #fff !important;
+	}
 </style>
