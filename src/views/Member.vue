@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    首页
+      会员页
   </div>
 </template>
 
