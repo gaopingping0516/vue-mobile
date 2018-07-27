@@ -5,7 +5,7 @@
                 <h4>{{info.title}}</h4>
                 <p class="news-info">
                     <span>发表时间: {{info.add_time | dateformat('YYYY-MM-DD HH:mm:ss')}}</span>
-                    <span class="mui-pull-right">点击： {{info.click}}次</span>
+                    <span class="mui-pull-right" v-if="info.click">点击： {{info.click}}次</span>
                 </p>
                 <hr>
             </div>
