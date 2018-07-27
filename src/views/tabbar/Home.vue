@@ -56,6 +56,7 @@ export default {
     };
   },
   created() {
+
     axios({
       url: "http://www.liulongbin.top:3005/api/getlunbo"
     }).then(res => {

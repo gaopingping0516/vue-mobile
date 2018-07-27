@@ -1,6 +1,8 @@
 <template>
 	<div id="app">
-		<mt-header fixed title="上海前端黑马21期"></mt-header>
+		<mt-header fixed title="上海前端黑马21期">
+			<mt-button v-if="$route.path != '/'" icon="back" slot='left' @click="$router.go(-1)">返回</mt-button>
+		</mt-header>
 		<router-view/>
 		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item mui-active" to="/">
